@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Room Booking Form</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        font-family: Arial, sans-serif;
+        background:#f4f6f9;
+        padding:30px;
+        color:#333;
+    }
+
+    h2{
+        text-align:center;
+        margin-bottom:20px;
+        color:#2c3e50;
+    }
+
+    form{
+        max-width:600px;
+        margin:0 auto 40px;
+        background:#fff;
+        padding:25px;
+        border-radius:10px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    label{
+        display:block;
+        margin-top:12px;
+        font-weight:bold;
+    }
+
+    input,
+    select{
+        width:100%;
+        padding:10px;
+        margin-top:5px;
+        border:1px solid #ccc;
+        border-radius:5px;
+        font-size:14px;
+    }
+
+    input:focus,
+    select:focus{
+        outline:none;
+        border-color:#3498db;
+    }
+
+    input[type="submit"]{
+        background:#3498db;
+        color:white;
+        border:none;
+        cursor:pointer;
+        margin-top:20px;
+        font-size:16px;
+        font-weight:bold;
+        transition:0.3s;
+    }
+
+    input[type="submit"]:hover{
+        background:#2980b9;
+    }
+
+    table{
+        width:100%;
+        border-collapse:collapse;
+        background:#fff;
+        box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        border-radius:10px;
+        overflow:hidden;
+    }
+
+    th{
+        background:#3498db;
+        color:white;
+        padding:12px;
+    }
+
+    td{
+        padding:10px;
+        border-bottom:1px solid #ddd;
+    }
+
+    tr:nth-child(even){
+        background:#f8f9fa;
+    }
+
+    tr:hover{
+        background:#eaf4fc;
+    }
+</style>
+</head>
+<body>
+
+    <h2>Conference Room Booking Form</h2>
+
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="department">Department:</label>
+        <select id="department" name="department">
+            <option value="">Select Department</option>
+            <option value="SWE">SWE</option>
+            <option value="CSE">CSE</option>
+            <option value="ICE">ICE</option>
+            <option value="BBA">BBA</option>
+        </select>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+
+        <label>Time:</label>
+        <input type="time" id="startTime" name="startTime">
+        <input type="time" id="endTime" name="endTime">
+
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Conference Room Information</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Building Number</th>
+                <th>Room No</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>1</td>
+                <td>101</td>
+                <td>09:00 AM</td>
+                <td>11:00 AM</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>2</td>
+                <td>202</td>
+                <td>10:00 AM</td>
+                <td>12:00 PM</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>3</td>
+                <td>303</td>
+                <td>01:00 PM</td>
+                <td>03:00 PM</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>4</td>
+                <td>404</td>
+                <td>09:30 AM</td>
+                <td>11:30 AM</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>5</td>
+                <td>505</td>
+                <td>02:00 PM</td>
+                <td>04:00 PM</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>6</td>
+                <td>606</td>
+                <td>10:00 AM</td>
+                <td>01:00 PM</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td colspan="4">No Room Available</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
